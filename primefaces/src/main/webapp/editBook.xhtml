@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+ 
+<h:head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="ingresssolutions" />
+    <meta http-equiv="Expire" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+</h:head>
+ 
+<h:body>
+ 
+    <h1>Create New Book</h1>
+    <h:form>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td><h:inputText id="name" value="#{bookController.currentBook.title}" /></td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td><h:inputText id="author" value="#{bookController.currentBook.author}" /></td>
+        </tr>
+        <tr>
+            <td>Publisher</td>
+            <td><h:inputText id="publisher" value="#{bookController.currentBook.publisher}" /></td>
+        </tr>
+        <tr>
+            <td><h:commandButton action="#{bookController.save}"
+                value="Save"/>
+            </td>
+        </tr>
+ 
+    </table>
+    </h:form>
+</h:body>
+</html>
